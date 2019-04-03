@@ -3,6 +3,8 @@ body{
 }
 .wrapper{
     padding: 0.1cm;
+    margin: 0.1cm;
+    background-color: rgb(93, 122, 122);
 }
 .chat_box{
     background-color: aquamarine;
