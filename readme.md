@@ -9,3 +9,6 @@ Basicly everything. The app is not pretty (see screenshot) and it is probably no
 install.
 # Screenshot:
 ![](readme/screenshot.png)
+# Clone
+Wow Someone other than me cloned by app. Thanks that is the first time that that has ever happened to me thanks!.
+![](readme/clone.png)
