@@ -17,12 +17,15 @@
 </div>
 <div class="main_window" id="main_window">
 	<div class="chat_box">
-		<form action="post_message" method="POST" enctype="multipart/form-data">
+		<form action="javascript:;" onsubmit="send_message(this)">
 		
 			<div class="uploader_inside">
 				<label for="subject">Subject: </label>
 				<input type="text" name="subject"/>
-				<label for="message">Message:</label>
+
+				<label for="username">Username: </label>
+				<input type="text" name="username"/>
+				<label for="messages">Message:</label>
 				<textarea id="message" name="messages"></textarea>
 				<input type="submit" value="submit message" />
 			</div>

@@ -12,9 +12,11 @@ def index():
 	return render_template('index.html')
 @app.route('/post_message', methods=['GET','POST'])
 def post_message():
+        
         if request.method=='POST':
-            print(request.form)
-            save_in_database(request.form.to_dict())
+            print("request")
+            print(type(request.form))
+            save_in_database(request.get_json())
 
         return redirect('/')
 @app.route('/get_messages',methods=['GET'])
@@ -25,6 +27,9 @@ def get_messages():
     return out
 def save_in_database(messages):
     try:
+        print("what the database got")
+        print(messages)
+        
         cursor.execute("INSERT INTO messages (messages,subject) VALUES (%s,%s)",
             (messages['messages'],messages['subject']))
         conn.commit()
@@ -44,10 +49,28 @@ def print_chat():
 
         while(True):#fetching data 
             data=cursor.fetchone()
+            print(data)
             if(data is None):
                 break
-            data={"messages":data[0],"subject":data[1]}
-            out_list.append(data);
+            message=""
+            subject=""
+            username=""
+            try:
+                message=data[0]
+            except:
+                print("message not found")
+            try:
+                subject=data[1]
+            except:
+                print("subject not found")
+            try:
+                username=data[2]
+            except:
+                print("username not found")
+            out_data={"messages":message,"subject":subject,
+            "username":username}
+
+            out_list.append(out_data);
             print(data)
         print(out_list)
     except:
