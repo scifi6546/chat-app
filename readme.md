@@ -10,5 +10,5 @@ install.
 # Screenshot:
 ![](readme/screenshot.png)
 # Clone
-Wow Someone other than me cloned by app. Thanks that is the first time that that has ever happened to me thanks!.
+Wow someone other than me cloned by app. Thanks that is the first time that that has ever happened to me. Thanks!
 ![](readme/clone.png)
